@@ -1,128 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>NpAutomate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NP Automate | Industrial Fasteners & Custom Parts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></script>
+    <style>
+        :root {
+            --primary: #00ffd5;
+            --secondary: #0066ff;
+            --dark: #0b1220;
+            --card-bg: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: var(--dark); color: #fff; overflow-x: hidden; }
+
+        /* Header & Logo */
+        header { text-align: center; padding: 50px 20px; background: linear-gradient(to bottom, #111827, var(--dark)); }
+        .logo-container {
+            width: 120px; height: 120px; margin: auto;
+            background: radial-gradient(circle, var(--primary), var(--secondary));
+            border-radius: 20px; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 30px rgba(0, 255, 213, 0.3); transform: rotate(45deg);
+        }
+        .logo-container span { transform: rotate(-45deg); font-weight: 900; color: #000; font-size: 28px; }
+        h1 { margin-top: 25px; font-size: 40px; color: var(--primary); text-transform: uppercase; }
+
+        /* Slider */
+        .slider-box { width: 100%; height: 350px; overflow: hidden; position: relative; margin: 30px 0; border-y: 2px solid var(--primary); }
+        .slides { display: flex; width: 400%; animation: slide 15s infinite ease-in-out; }
+        .slide { width: 100%; position: relative; }
+        .slide img { width: 100%; height: 350px; object-fit: cover; opacity: 0.6; }
+        .slide-text { position: absolute; bottom: 20%; left: 5%; color: var(--primary); font-size: 24px; font-weight: bold; background: rgba(0,0,0,0.5); padding: 10px; }
+
+        @keyframes slide {
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-25%); }
+            50%, 70% { transform: translateX(-50%); }
+            75%, 95% { transform: translateX(-75%); }
+        }
+
+        /* Sections */
+        .container { padding: 40px 20px; max-width: 1100px; margin: auto; }
+        .section-title { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-bottom: 30px; }
+
+        /* Products Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); padding: 20px; border-radius: 10px; transition: 0.3s; border: 1px solid #334155; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+        .card img { width: 100%; height: 180px; border-radius: 8px; object-fit: cover; margin-bottom: 15px; }
+
+        /* Inquiry & Payment Form */
+        .order-form { background: #111827; padding: 30px; border-radius: 15px; border: 1px solid var(--secondary); }
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 5px; }
+        .btn { background: var(--primary); color: #000; padding: 15px 30px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%; font-size: 16px; }
+        .btn-wa { background: #25d366; color: white; margin-top: 10px; }
+
+        /* Admin Panel Area */
+        #admin-panel { display: none; background: #fff; color: #000; padding: 20px; margin-top: 30px; border-radius: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+
+        footer { text-align: center; padding: 40px; background: #000; color: #64748b; margin-top: 50px; }
+    </style>
 </head>
-<body>
-  <h1>🚀 NpAutomate Website</h1>
-  <p>Site is working!</p>
-</body>
-</html/>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>NpAutomate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #f5f5f5;
-    }
-
-    header {
-      background: #0a0a23;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background: linear-gradient(to right, #007bff, #00c6ff);
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 32px;
-    }
-
-    .btn {
-      background: white;
-      color: #007bff;
-      padding: 12px 20px;
-      border: none;
-      margin-top: 15px;
-      font-size: 16px;
-      border-radius: 5px;
-    }
-
-    .section {
-      padding: 30px;
-      text-align: center;
-    }
-
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 10px;
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #0a0a23;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
 <body>
 
 <header>
-  NpAutomate
+    <div class="logo-container"><span>NPA</span></div>
+    <h1>NP Automate</h1>
+    <p class="tagline">Precision Engineering | Custom Fasteners | Industrial Excellence</p>
 </header>
 
-<div class="hero">
-  <h1>Grow Your Business with Automation 🚀</h1>
-  <p>We provide smart digital solutions to boost your productivity</p>
-  <button class="btn">Get Started</button>
+<div class="slider-box">
+    <div class="slides">
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1530124560676-587cad3079b3?auto=format&fit=crop&w=1000&q=80" alt="Bolts">
+            <div class="slide-text">High-Tensile Industrial Bolts</div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=80" alt="Manufacturing">
+            <div class="slide-text">Custom CNC Machined Parts</div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1535813548-6601f6aa2f42?auto=format&fit=crop&w=1000&q=80" alt="Screws">
+            <div class="slide-text">Precision Fastener Solutions</div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1000&q=80" alt="Industrial">
+            <div class="slide-text">Your Partner in Production</div>
+        </div>
+    </div>
 </div>
 
-<div class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    
-    <div class="card">
-      <h3>Website Development</h3>
-      <p>Modern and responsive websites for your business</p>
+<div class="container">
+    <h2 class="section-title">Our Specialized Products</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1621259182978-f09e5e2ca09a?auto=format&fit=crop&w=500&q=80" alt="Bolts">
+            <h3>Industrial Bolts</h3>
+            <p>Grade 8.8, 10.9 & Stainless Steel varieties for heavy machinery.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b0c26670?auto=format&fit=crop&w=500&q=80" alt="Screws">
+            <h3>Custom Screws</h3>
+            <p>Self-tapping, machine screws, and custom thread designs.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Parts">
+            <h3>Custom Machined Parts</h3>
+            <p>Automotive components and custom curve metal parts.</p>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>Automation Tools</h3>
-      <p>Save time with smart automation solutions</p>
+    <hr style="margin: 60px 0; border: 0; border-top: 1px solid #334155;">
+
+    <div class="grid">
+        <div class="order-form">
+            <h2 style="color: var(--primary)">Quick Order & Inquiry</h2>
+            <form id="mainForm">
+                <input type="text" id="custName" placeholder="Your Name" required>
+                <input type="tel" id="custPhone" placeholder="Mobile Number" required>
+                <select id="prodType">
+                    <option value="Bolts">Bolts</option>
+                    <option value="Screws">Screws</option>
+                    <option value="Custom Parts">Custom Parts</option>
+                    <option value="Fasteners">Fasteners</option>
+                </select>
+                <textarea id="msg" rows="4" placeholder="Describe your requirement (Sizes, Quantity, etc.)"></textarea>
+                
+                <p style="margin-top:15px; color: var(--primary)"><strong>Payment Preference:</strong></p>
+                <p style="font-size: 12px; color: #888;">Complete payment to <strong>9540588819@paytm</strong> then enter Transaction ID below.</p>
+                <input type="text" id="txnId" placeholder="UPI Transaction ID (if paying now)">
+                
+                <button type="submit" class="btn">SUBMIT ORDER TO SYSTEM</button>
+                <button type="button" class="btn btn-wa" onclick="sendWhatsApp()">SEND DIRECT WHATSAPP</button>
+            </form>
+        </div>
+
+        <div>
+            <h2 class="section-title">Why NP Automate?</h2>
+            <p style="line-height: 1.8; color: #cbd5e1;">
+                Founded in 2010, <strong>NP Automate</strong> is a leader in the manufacturing of high-quality fasteners and custom industrial components. We specialize in precision parts tailored for automotive and construction industries. Our production unit in Delhi is equipped to handle bulk orders with global quality standards.
+            </p>
+            <div style="margin-top: 20px;">
+                <p><i class="fas fa-phone var(--primary)"></i> +91 95405 88819</p>
+                <p><i class="fas fa-envelope var(--primary)"></i> npautomat.2010@gmail.com</p>
+                <p><i class="fas fa-location-dot var(--primary)"></i> Nangloi, Delhi, India</p>
+            </div>
+            <button onclick="toggleAdmin()" style="margin-top:30px; background:transparent; color:#334155; border:none; cursor:pointer;">Admin Login</button>
+        </div>
     </div>
 
-    <div class="card">
-      <h3>Digital Marketing</h3>
-      <p>Grow your brand and reach more customers</p>
+    <div id="admin-panel">
+        <h3>Master Order Dashboard (Admin Only)</h3>
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Product</th>
+                    <th>TXN ID</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="orderBody"></tbody>
+        </table>
+        <button onclick="downloadExcel()" style="margin-top:10px; padding:5px 10px;">Download Excel Report</button>
     </div>
-
-  </div>
-</div>
-
-<div class="section">
-  <h2>Contact Us</h2>
-  <p>Email: your@email.com</p>
 </div>
 
 <footer>
-  © 2026 NpAutomate | All Rights Reserved
+    &copy; 2026 NP Automate. All Rights Reserved. <br>
+    Industrial Precision at its Best.
 </footer>
+
+<script>
+    // System to save orders
+    document.getElementById('mainForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const order = {
+            name: document.getElementById('custName').value,
+            phone: document.getElementById('custPhone').value,
+            product: document.getElementById('prodType').value,
+            txn: document.getElementById('txnId').value || 'Pending',
+            date: new Date().toLocaleDateString()
+        };
+
+        // Save to local storage (Simple Database)
+        let orders = JSON.parse(localStorage.getItem('npOrders') || '[]');
+        orders.push(order);
+        localStorage.setItem('npOrders', JSON.stringify(orders));
+
+        alert("Order Recorded Successfully! Our team will contact you.");
+        this.reset();
+        loadOrders();
+    });
+
+    function sendWhatsApp() {
+        const name = document.getElementById('custName').value;
+        const prod = document.getElementById('prodType').value;
+        const msg = document.getElementById('msg').value;
+        const text = `Hello NP Automate, I am ${name}. I am interested in ${prod}. Details: ${msg}`;
+        window.open(`https://wa.me/919540588819?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function toggleAdmin() {
+        const pass = prompt("Enter Admin Password:");
+        if(pass === "np2010") {
+            document.getElementById('admin-panel').style.display = 'block';
+            loadOrders();
+        } else {
+            alert("Wrong Password");
+        }
+    }
+
+    function loadOrders() {
+        const orders = JSON.parse(localStorage.getItem('npOrders') || '[]');
+        const body = document.getElementById('orderBody');
+        body.innerHTML = orders.map(o => `
+            <tr>
+                <td>${o.name} (${o.phone})</td>
+                <td>${o.product}</td>
+                <td>${o.txn}</td>
+                <td style="color:green">Received</td>
+            </tr>
+        `).join('');
+    }
+
+    function downloadExcel() {
+        let orders = JSON.parse(localStorage.getItem('npOrders') || '[]');
+        let csvContent = "data:text/csv;charset=utf-8,Name,Phone,Product,TXN_ID,Date\n";
+        orders.forEach(o => {
+            csvContent += `${o.name},${o.phone},${o.product},${o.txn},${o.date}\n`;
+        });
+        const encodedUri = encodeURI(csvContent);
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", "np_automate_orders.csv");
+        document.body.appendChild(link);
+        link.click();
+    }
+</script>
 
 </body>
 </html>
